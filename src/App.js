@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import FormControl from './components/FormControl';
+import Form from './components/Form';
 
 function App() {
+
+  let [formState, setFormState] = useState(1)
+  let [billingType, setBillingType] = useState('Monthly')
+  let [summary, setSummary] = useState({})
+
+
+  const nextStep =  (e) => {
+    e.preventDefault()
+    formState < 5 && setFormState(formState + 1)
+  }
+
+  const prevStep =  () => {
+    formState > 0 && setFormState(formState - 1)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FormControl formState={formState}/>
+      <Form 
+        formState={formState} 
+        nextStep={nextStep} 
+        prevStep={prevStep} 
+        billingType={billingType} 
+        setBillingType={setBillingType} 
+        summary={summary} 
+        setSummary={setSummary} 
+        setFormState={setFormState}
+      />
     </div>
   );
 }
