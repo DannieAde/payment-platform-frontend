@@ -88,7 +88,7 @@ const SecondForm = ({ nextStep, prevStep, billingType, setBillingType, summary, 
 
       <div className="navigate-forms">
         <button className='prev-step' onClick={prevStep}>Go Back</button>
-        <button disabled={!arcadeClicked && !advancedClicked && !proClicked ? true : false} className='next-step' onClick={(e) => nextStepTwo(e)}>Next Step</button>
+        <button disabled={!arcadeClicked && !advancedClicked && !proClicked ? true : false} className='next-step' onClick={(e) => nextStepTwo(e)}>Next</button>
       </div>
     </div>
   )

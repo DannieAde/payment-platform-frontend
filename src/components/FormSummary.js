@@ -37,7 +37,7 @@ const FormSummary = ({ prevStep, nextStep, setFormState ,summary }) => {
               </div>)}
 
               {summary.addons.profileService > 0 && (<div className="add-on">
-                <p>Customizable Profile</p>
+                <p>Custom Profile</p>
                 <p className='add-on-cost'>{`+$${summary.addons.profileService}/${summary.billingType === 'Monthly' ? 'mo' : 'yr'}`}</p>
               </div>)}
             </div>

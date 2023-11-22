@@ -79,7 +79,7 @@ const ThirdForm = ({ nextStep, prevStep, billingType, summary, setSummary }) => 
               {profileClicked ? <img src="/images/icon-checkmark.svg" alt="show" /> : null}
             </div>
             <div className='add-on-details'>
-              <h3>Customizable profile</h3>
+              <h3>Custom profile</h3>
               <p>Custom theme on your profile</p>
             </div>
           </div>
@@ -88,7 +88,7 @@ const ThirdForm = ({ nextStep, prevStep, billingType, summary, setSummary }) => 
 
         <div className="navigate-forms">
           <button className='prev-step' onClick={(e) => prevStep(e)}>Go Back</button>
-          <button disabled={!serviceClicked & !storageClicked & !profileClicked ? true : false} className='next-step' onClick={(e) => nextStepThree(e)}>Next Step</button>
+          <button disabled={!serviceClicked & !storageClicked & !profileClicked ? true : false} className='next-step' onClick={(e) => nextStepThree(e)}>Next</button>
         </div>
 
       </form>

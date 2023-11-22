@@ -471,18 +471,14 @@ button, a {
     width: 100%;
     height: 12rem;
     border-radius: 0;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  
-    /* align-items: center; */
   }
 
-  .form-control .step {
-    position: relative;
-    left: 12%;
-    transform: translateX(-12%);
+  .form-control .steps-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .form-control .step .step-description p {
@@ -552,5 +548,206 @@ button, a {
     border: 1px solid var(--Cool-gray);
     border-radius: 2px;
     margin-right: 1rem;
+  }
+
+  .sub-summary .summary-details {
+    background-color: var(--Magnolia);
+    border-radius: 12px;
+  
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .sub-summary p { /*all the paragragh tags in summary */
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 410px) {
+
+  body {
+    font-size: 10px;
+  }
+
+  .next-step {
+    padding: 10px;
+  }
+
+  .navigate-forms {
+    margin-top: 3rem;
+  }
+
+  .navigate-forms .prev-step {
+    font-size: 10px;
+  }
+
+  .navigate-forms .next-step {
+    font-size: 10px;
+  }
+
+  .billing-control .billing-toggle-options .billing-toggle-button {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    width: 2rem;
+    background-color: var(--Marine-blue);
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 .5rem;
+    padding: 0 .2rem;
+  }
+  
+  .billing-control .billing-toggle-options .billing-toggle-button .toggle-circle {
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .billing-control .billing-toggle-options .billing-toggle-button .toggle-circle.yearly {
+    animation: slide-forward 1s forwards;
+  }
+  
+  .billing-control .billing-toggle-options .billing-toggle-button .toggle-circle.monthly {
+    animation: slide-backward 1s forwards;
+  }
+  
+  @keyframes slide-forward{
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(.85rem);
+    }
+  }
+  
+  @keyframes slide-backward{
+    0% {
+      transform: translateX(.85rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  .billing {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .billing .billing-option {
+    width: 100%;
+    border: 1px solid var(--Light-gray);
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .billing .billing-option img {
+    height: 20px;
+    width: 20px;
+    margin: 0 .8rem 0 0;
+  }
+
+  .billing .billing-option p {
+    font-size: 10px;
+  }
+  
+  .billing .billing-option h3 {
+    color: var(--Marine-blue);
+    font-size: 12px;
+    margin-bottom: .2rem;
+  }
+  
+  .billing .billing-option h6 {
+    color: var(--Marine-blue);
+    font-size: 10px;
+  }
+
+  .add-ons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    margin-top: 1.5rem;
+    padding: .4rem;
+    border: 2px solid var(--Cool-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .add-ons-container h3 {
+    font-size: 12px;
+  }
+
+  .add-ons-container p {
+    font-size: 8px;
+  }
+
+  .add-ons-container:hover {
+    border: 2px solid var(--Purplish-blue);
+  }
+  
+  .add-ons-container.clicked{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: var(--Magnolia);
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 2px solid var(--Purplish-blue);
+    border-radius: 8px;
+  }
+  
+  .add-ons-container .img-container {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Cool-gray);
+    border-radius: 6px;
+    margin-right: 1rem;
+  }
+
+  .sub-summary .summary-details {
+    background-color: var(--Magnolia);
+    border-radius: 12px;
+  
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .sub-summary .billing-details p {
+    font-size: 12px;
+  }
+
+  .sub-summary p { /*all the paragragh tags in summary */
+    font-size: 8px;
+  }
+
+  .sub-summary .summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 2rem 1rem 0;
+  }
+  
+  .sub-summary .summary-total .total-cost {
+    color: var(--Purplish-blue);
+    font-size: 8px;
+    font-weight: 600;
   }
 }
