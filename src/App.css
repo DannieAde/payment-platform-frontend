@@ -475,7 +475,14 @@ button, a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  
     /* align-items: center; */
+  }
+
+  .form-control .step {
+    position: relative;
+    left: 12%;
+    transform: translateX(-12%);
   }
   
   .form-control .step .step-description p {
